@@ -1,1 +1,1 @@
-A self-development project for Alexander Yatsumira.
+Self-development project at my internship on DigitalSkynet company
