@@ -1,0 +1,50 @@
+<mat-tab-group mat-stretch-tabs [selectedIndex]="selected">
+    <mat-tab label="Sign in">
+        <div class="Sign_in" *ngIf="!IsLoading">
+            <mat-form-field>
+                <input matInput  placeholder="Login" [(ngModel)]='L_login'>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput  placeholder="Password" [(ngModel)]='L_password' type='password'>
+            </mat-form-field>
+        </div>
+        <div *ngIf="answer?.statusCode===400" class="alert alert-danger" role="alert">
+                {{answer?.userMessage}}
+        </div>
+        <div *ngIf="answer?.statusCode===200" class="alert alert-success" role="alert">
+            Successfully registration! Now you can Sign In.
+        </div>
+        <div class="Loading" *ngIf="IsLoading">
+            <mat-spinner></mat-spinner>
+        </div>
+        <div class="Buttons" >
+            <button mat-button color="primary" [disabled]="IsLoading" (click)="SignIn()">Sign in</button>
+        </div>
+    </mat-tab>
+
+    <mat-tab label="Registration" [disabled]='IsRegister'>
+        <div class="Registration" *ngIf="!IsLoading">
+            <mat-form-field>
+                <input matInput placeholder="Login" [(ngModel)]='R_login'[formControl]="Login" required>
+                <mat-error *ngIf="Login.invalid">{{getErrorMessage(1)}}</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput  placeholder="Password" [(ngModel)]='R_password' type="password" [formControl]="Password"  required>
+                <mat-error *ngIf="Password.invalid">{{getErrorMessage(2)}}</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput  placeholder="Password Confirm" [(ngModel)]='R_passwordConfirm' type="password" [formControl]="Password"  required>
+                <mat-error *ngIf="Password.invalid">{{getErrorMessage(2)}}</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="Loading" *ngIf="IsLoading">
+            <mat-spinner></mat-spinner>
+        </div>
+        <div *ngIf="answer?.statusCode===400" class="alert alert-danger" role="alert">
+                {{answer?.userMessage}}
+        </div>
+        <div class="Buttons">
+            <button mat-button color="primary" [disabled]="IsLoading" (click)="Register()">Register</button>
+        </div>
+    </mat-tab>
+</mat-tab-group>

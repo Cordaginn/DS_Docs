@@ -1,0 +1,24 @@
+.Registration
+{
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 5%;
+}
+.Sign_in
+{
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 5%;
+}
+.Buttons>button
+{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.Loading
+{
+    display: flex;
+    justify-self: center;
+}

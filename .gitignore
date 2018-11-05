@@ -1,0 +1,26 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/DSDocs3/v15
+/.vs
+/Backend/.vs/DSDoc3/v15/Server/sqlite3
+/Backend/DSDoc3.BussinessObjects/bin/Debug/netstandard2.0
+/Backend/DSDoc3.BussinessObjects/obj
+/Backend/DSDoc3.Core/bin/Debug/netstandard2.0
+/Backend/DSDoc3.Core/obj
+/Backend/DSDoc3.DataAccess/bin/Debug/netstandard2.0
+/Backend/DSDoc3.DataAccess/obj
+/Backend/DSDoc3.WebAPI/bin/Debug/netcoreapp2.0
+/Backend/DSDoc3.WebAPI/obj
+*.user
+/Backend/DSDoc3.WebAPI/node_modules
+/Backend/DSDoc3.WebAPI/wwwroot/styles.b50bf6bf82ebcf10df65.css
+/Backend/DSDoc3.WebAPI/wwwroot/runtime.a66f828dca56eeb90e02.js
+/Backend/DSDoc3.WebAPI/wwwroot/polyfills.86497ad72e68dc569707.js
+/Backend/DSDoc3.WebAPI/wwwroot/main.405676993e6f76180ffb.js
+/Backend/DSDoc3.WebAPI/wwwroot/index.html
+/Backend/DSDoc3.WebAPI/wwwroot/favicon.ico
+/Backend/DSDoc3.WebAPI/wwwroot/3rdpartylicenses.txt
+/.vscode
+

@@ -1,0 +1,13 @@
+
+<mat-toolbar color="primary" class="Toolbar">
+    <Menu class="Menu d-none d-xl-flex" id="1" >
+    </Menu>
+    <TextEditor class="TextEditor" id="1"(openSide)="openSide(true)" >
+    </TextEditor>
+    <Social class="Social d-none d-xl-flex" id="1" > 
+    </Social>
+</mat-toolbar>
+<nouislider class="Ruler" (update)="indent(start1)" [connect]="connect1" [min]="0" [max]="1140" [(ngModel)]='start1'></nouislider>
+<nouislider class="Ruler" (update)="Padding(start2)" [connect]="connect2" [min]="0" [max]="1140" [(ngModel)]='start2'></nouislider>
+<!-- <mat-slider class="Ruler" (input)="indent(indentV.value)" color="primary" #indentV="matSlider" min="0" max="1140" tickInterval="auto" step="19"></mat-slider>
+<mat-slider class="Ruler" (input)="outdent(outdentV.value)" color="primary" invert #outdentV="matSlider" min="0" max="1140" tickInterval="auto" step="19"></mat-slider> -->

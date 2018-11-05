@@ -1,0 +1,10 @@
+<input matInput #message [(ngModel)]="DocName" maxlength="50" placeholder="Document Name">
+<mat-hint align="end">{{message.value.length}} / 50</mat-hint>
+<div class="SaveButtons">
+<button mat-button (click)="Save()">
+Save
+</button>
+<button mat-button (click)="Cancel()">
+Cancel
+</button>
+</div>

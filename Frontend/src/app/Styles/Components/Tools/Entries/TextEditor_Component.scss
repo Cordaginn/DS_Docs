@@ -1,0 +1,72 @@
+@import "src/sass/templates.scss";
+:host
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .AlignEditor
+    {
+        @include Row;
+        display: flex;
+        align-self:center;
+        button
+        {
+            min-width: 44px;
+        }
+        
+    }
+    .Fonts
+    {
+        @include Row;
+        @media screen and (max-width:360px){
+            width: 240px
+        };
+        @media screen and (max-width:430px)and (min-width:360px){
+            width: 280px
+        };
+        justify-content: space-evenly;
+    }
+    .FontsList
+    {
+        width: auto;
+        user-select: none;
+        
+    }
+    .Font_size
+    {
+        width: 11%;
+        user-select: none;
+    }
+    .FontStyle
+    {
+        @include Row;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .buttons_BIU
+        {
+            @include Row;
+            justify-content: center;
+            button
+            {
+                min-width: 44px;
+            }
+        }
+    }
+    .part_one
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .part_two
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .color_picker
+    {
+        width: 11%
+    }
+}

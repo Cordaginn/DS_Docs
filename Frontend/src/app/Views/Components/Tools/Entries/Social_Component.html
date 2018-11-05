@@ -1,0 +1,19 @@
+<button mat-icon-button class="Sharing" (click)="openDialog()">
+    <mat-icon class="ShareIcon">
+        <i class="material-icons">
+            share
+        </i>
+    </mat-icon>
+</button>
+<mat-form-field class="Accessability" floatLabel="never">
+        <mat-select placeholder="Access preferences">
+          <mat-option *ngFor="let option of options" [value]="option.value">
+            {{option.viewValue}}
+          </mat-option>
+        </mat-select>
+</mat-form-field>
+<div class="UserProfile">
+    <button mat-icon-button>
+            {{Id}}
+    </button>
+</div>

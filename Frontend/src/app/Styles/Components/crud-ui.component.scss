@@ -1,0 +1,25 @@
+:host
+{
+    background-color: #eee;
+}
+.Headers
+{
+    margin-left: 100px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    
+}
+.Toolbar
+{
+    display: flex;
+    position: fixed;
+    z-index: 2;
+    width:100%;
+}
+#head1
+{
+        margin-top:90px;
+}
+.example-spacer {
+    flex: 1 1 auto;
+}

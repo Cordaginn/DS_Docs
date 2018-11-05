@@ -1,0 +1,56 @@
+<mat-list class="Dialog_Window">
+<mat-list-item class="item1">
+    <div class="buttons">
+        <button mat-raised-button class="Dialog_buttons" color="primary">
+            Share file
+        </button>
+        <mat-icon color="primary">
+            <i class="material-icons-1">
+                share
+            </i>
+        </mat-icon>
+        <button mat-raised-button class="Dialog_buttons" color="primary">
+            Copy link
+        </button>
+        <mat-icon color="primary">
+            <i class="material-icons-1">
+                file_copy
+            </i>
+        </mat-icon>
+    </div>
+</mat-list-item>
+<mat-list-item>
+    <mat-form-field class="ShareLink" floatLabel="never">
+        <input matInput placeholder="Share link">
+    </mat-form-field>
+</mat-list-item>
+<mat-list-item>
+    <label class="People_Label">
+        People
+    </label>
+</mat-list-item>
+<mat-list-item >
+    <div class="D_FooterTools">
+        <mat-icon class="material-icons-2" color="primary">
+            <i >
+                email
+            </i>
+        </mat-icon>
+        <mat-form-field floatLabel="never">
+            <input matInput placeholder="Add people's emails here" class="AddEmail">
+        </mat-form-field>
+        <mat-icon class="material-icons-2" color="primary">
+            <i >
+                edit
+            </i>
+        </mat-icon>
+        <mat-form-field class="D_options" floatLabel="never">
+            <mat-select placeholder="options">
+                <mat-option *ngFor="let option of options" [value]="option.value">
+                    {{option.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+</mat-list-item>
+</mat-list>

@@ -1,0 +1,25 @@
+
+.Menu
+{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+.Social
+{
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+    align-items: center;
+}
+.Sidenav
+{
+    display: flex;
+    flex-direction: column;
+    .Side
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

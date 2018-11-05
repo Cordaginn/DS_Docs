@@ -1,0 +1,24 @@
+  <button mat-button [matMenuTriggerFor]="menu1" color="basic" class="File">File</button>
+  <mat-menu #menu1="matMenu"overlapTrigger=false>
+    <button mat-menu-item (click)="CreateDoc()">Create</button>
+    <button mat-menu-item (click)="openFile()">Open</button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item (click)="Save()">Save</button>
+    <button mat-menu-item (click)="openSaveDialog()">Save As</button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item (click)="Exit()">Exit</button>
+  </mat-menu>
+  <button mat-button [matMenuTriggerFor]="menu2"color="basic" class="Edit">Edit</button>
+  <mat-menu #menu2="matMenu"overlapTrigger=false>
+    <button mat-menu-item  (click)="editCommand('undo')" >Undo</button>
+    <button mat-menu-item  (click)="editCommand('redo')" >Redo</button>
+  </mat-menu>
+  <button mat-button [matMenuTriggerFor]="menu3"color="basic" class="View">View</button>
+  <mat-menu #menu3="matMenu"overlapTrigger=false>
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+  <button mat-button [matMenuTriggerFor]="menu4"color="basic" class="Help">Help</button>
+  <mat-menu #menu4="matMenu"overlapTrigger=false>
+    <button mat-menu-item (click)="openDialog()">About</button>
+</mat-menu>

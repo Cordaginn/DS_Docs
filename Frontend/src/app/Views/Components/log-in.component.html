@@ -1,0 +1,28 @@
+<mat-card class="Sign_In_Cards">
+    <mat-card-header>
+        <mat-card-title><h4>Welcome to DSDocs3</h4></mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <h1>
+          Use your account
+        </h1>
+          <div class="Sign_in" *ngIf="!IsLoading">
+              <mat-form-field>
+                  <input matInput  placeholder="Login" [(ngModel)]='L_login'>
+              </mat-form-field>
+              <mat-form-field>
+                  <input matInput  placeholder="Password" [(ngModel)]='L_password' type='password'>
+              </mat-form-field>
+          </div>
+          <div class="Loading" *ngIf="IsLoading">
+              <mat-spinner></mat-spinner>
+          </div>
+          <div *ngIf="answer?.statusCode===400" class="alert alert-danger" role="alert">
+              {{answer?.userMessage}}
+          </div>
+      </mat-card-content>
+      <mat-card-actions class="Buttons">
+        <button mat-button [disabled]="IsLoading" (click)="RedirectToRegister()">Create Account</button>
+        <button mat-raised-button color="primary" [disabled]="IsLoading" (click)="SignIn()">Sign In</button>
+      </mat-card-actions>
+</mat-card>

@@ -1,0 +1,89 @@
+<div class="part_one">
+        <button mat-icon-button class="Sidenav_button d-xl-none" (click)="change(true)" >
+                                <i class="material-icons">
+                                    menu
+                                </i>
+                            </button>
+        <div class="Fonts">
+                <mat-form-field class="FontsList"  floatLabel="never">
+                        <mat-select [(value)]="selectedFont" #font="matSelect">
+                          <mat-option *ngFor="let font of fonts" class="Options"[value]="font.value" (click)="setStyle('fontName',font.value)">
+                            {{font.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                </mat-form-field>
+                <mat-form-field class="Font_size" floatLabel="never">
+                                <mat-select [(value)]="selectedSize" #fontSize="matSelect">
+                                    <mat-option *ngFor="let size of sizes" [value]="size.value" (click)="setStyle('fontSize',fontSize.value)">
+                                        {{size.viewValue}}
+                                    </mat-option>
+                                </mat-select>
+                </mat-form-field>
+        </div>
+</div>
+<div class="part_two">
+        <div class="FontStyle">
+                <div class="buttons_BIU">
+                        <button mat-button (click)="setStyle('bold')" >
+                                <mat-icon>
+                                        format_bold
+                                </mat-icon>
+                        </button>
+                        <button mat-button (click)="setStyle('italic')" >
+                                <mat-icon>
+                                        <i class="material-icons">
+                                        format_italic
+                                        </i>
+                                </mat-icon>
+                        </button>
+                        <button mat-button (click)="setStyle('underline')" >
+                                <mat-icon>
+                                        <i class="material-icons">
+                                        format_underlined
+                                        </i>
+                                </mat-icon>
+                        </button>
+                </div>
+                <button mat-raised-button mat-button [matMenuTriggerFor]="ColorMenu">
+                        <i class="material-icons selectedColor">
+                        format_color_text
+                        </i>
+                </button>
+                <mat-menu #ColorMenu="matMenu"overlapTrigger=false class="ColorPicker">
+                        <mat-grid-list cols="4" rowHeight="50px" >
+                                <mat-grid-tile
+                                        *ngFor="let tile of tiles"
+                                        [colspan]="tile.cols"
+                                        [rowspan]="tile.rows">
+                                      <button mat-icon-button [style.background]="tile.color" (click)="setStyle('foreColor',tile.color)">
+                                      </button>
+                                </mat-grid-tile>
+                        </mat-grid-list>
+                </mat-menu>
+        </div>
+        <div class="AlignEditor">
+                        <button mat-button (click)="setStyle('justifyLeft')">
+                                <mat-icon>
+                                format_align_left
+                                </mat-icon>
+                        </button>
+                        <button mat-button (click)="setStyle('justifyCenter')">
+                                <mat-icon>
+                                format_align_center
+                                </mat-icon>
+                        </button>
+                        <button mat-button (click)="setStyle('justifyRight')">
+                                <mat-icon>
+                                format_align_right
+                                </mat-icon>
+                        </button>
+                        <button mat-button (click)="setStyle('justifyFull')">
+                                <mat-icon>
+                                format_align_justify
+                                </mat-icon>
+                        </button>
+        </div>     
+</div>
+
+
+    

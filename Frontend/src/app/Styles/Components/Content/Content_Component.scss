@@ -1,0 +1,35 @@
+:host
+{
+    display: flex;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    justify-content: center;
+    background-color:#eee;
+    @media screen and (max-width:1386) and (min-width:1200px)
+    {
+        padding-top: 135px;
+    }
+    @media screen and (min-width: 912px) {
+        padding-top: 110px;
+    }
+    @media screen and (max-width:911px) and (min-width:512px)
+    {
+        padding-top: 150px;
+    }
+    @media screen and (max-width: 511px)
+    {
+        padding-top: 185px;
+    }
+}
+// .BodyC
+// {
+//     height: -webkit-fill-available;
+// }
+.editing_content
+{
+    background-color: white;
+    height: inherit;
+    width: 1152px;
+    overflow: hidden;
+    box-shadow: 0 0 0 0.75pt #d1d1d1, 0 0 3pt 0.75pt #ccc
+}

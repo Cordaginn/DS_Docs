@@ -1,0 +1,22 @@
+:host
+{
+    background-color: #eee;
+    height: -webkit-fill-available;
+    display: flex;
+    justify-content: center;
+}
+.Sign_in
+{
+    display: flex;
+    flex-direction: column;
+}
+.Sign_In_Cards
+{
+    margin: 8%;
+    height: max-content;
+}
+.Buttons
+{
+    display: flex;
+    justify-content: space-between;
+}

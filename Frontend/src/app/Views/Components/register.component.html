@@ -1,0 +1,34 @@
+<mat-card class="Sign_In_Cards">
+    <mat-card-header>
+        <mat-card-title><h4>Account Creating</h4></mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <h1>
+          Enter your Login and password
+        </h1>
+        <div class="Registration" *ngIf="!IsLoading">
+            <mat-form-field>
+                <input matInput placeholder="Login" [(ngModel)]='R_login'[formControl]="Login" required>
+                <mat-error *ngIf="Login.invalid">{{getErrorMessage(1)}}</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput  placeholder="Password" [(ngModel)]='R_password' type="password" [formControl]="Password"  required>
+                <mat-error *ngIf="Password.invalid">{{getErrorMessage(2)}}</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput  placeholder="Password Confirm" [(ngModel)]='R_passwordConfirm' type="password" [formControl]="Password"  required>
+                <mat-error *ngIf="Password.invalid">{{getErrorMessage(2)}}</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="Loading" *ngIf="IsLoading">
+            <mat-spinner></mat-spinner>
+        </div>
+        <div *ngIf="answer?.statusCode===400" class="alert alert-danger" role="alert">
+                {{answer?.userMessage}}
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="Buttons">
+        <button mat-button [disabled]="IsLoading" (click)="RedirectToSignIn()">Sign In</button>
+        <button mat-raised-button color="primary" [disabled]="IsLoading" (click)="Register()">Create</button>
+      </mat-card-actions>
+</mat-card>

@@ -1,0 +1,18 @@
+:host
+{
+    display: flex;
+    align-items: stretch;
+    height: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.Foot
+{
+    display: flex;
+    flex:1 1 33%;
+    justify-content: center;
+    padding: 0%;
+    align-items: center;
+    height: 100%;
+}

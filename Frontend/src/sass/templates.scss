@@ -1,0 +1,6 @@
+@mixin Row {
+    display: flex;
+    align-items: center;
+    flex-grow: 0;
+    flex-shrink: 1;
+}

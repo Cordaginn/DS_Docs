@@ -1,0 +1,55 @@
+:host
+{
+    .ShareLink
+    {
+        padding-top: 3%;
+        width: 100%;
+    }
+    .People_Label
+    {
+        padding-top: 3%;
+    }
+    .D_FooterTools
+    {
+        width:100%;
+        display: flex;
+        margin-top: 7%;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    .material-icons-2
+    {
+        i 
+        {
+        font-style: normal;
+        font-size: 36px;
+        }
+     
+    }
+    .Dialog_Window
+    {
+        display: flex;
+        flex-flow:column wrap;
+        .item1
+        {
+            div
+            {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+    }
+    .material-icons-1 
+    { 
+        font-style: normal;
+        font-size: 36px; 
+    }
+    .Dialog_buttons
+    {
+        width:35%;
+    }
+}
+    
+
+    

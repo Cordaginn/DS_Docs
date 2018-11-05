@@ -1,0 +1,16 @@
+<mat-sidenav-container class="Sidenav" autosize >
+  <mat-sidenav class="Side" #sidenav mode="push" [(opened)]="state">
+      <Menu class="Menu" >
+      </Menu>
+      <Social class="Social" > 
+      </Social>
+  </mat-sidenav>
+  <mat-sidenav-content>
+      <Tools class="Tools"(Changed)="onChanged($event)">
+      </Tools>
+      <Content class="Content" >
+      </Content>
+      <BottomLabel class="BottomLabel" >
+      </BottomLabel>
+  </mat-sidenav-content>
+</mat-sidenav-container>
