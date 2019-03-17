@@ -1,4 +1,4 @@
-Self-development project at my internship on DigitalSkynet company https://digitalskynet.ru/
+Self-development project at my internship
 
  used technologies:
 * On Backend:
